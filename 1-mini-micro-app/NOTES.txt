@@ -12,3 +12,22 @@ $ npm install express cors axios nodemon cors
 
 Client 
 $ npm install axios 
+
+Events
+
+$ mkdir event-bus | cd event-bus 
+$ npm init -y
+$ npm install express nodemon axios
+
+
+Query
+
+$ mkdir query | cd query 
+$ npm init -y 
+$ npm install express cors nodemon
+
+Moderation
+
+$ mkdir moderation | cd moderation 
+$ npm init -y 
+$ npm install express axios nodemon
