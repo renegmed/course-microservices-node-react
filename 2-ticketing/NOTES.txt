@@ -35,3 +35,10 @@ Add the line to /etc/hosts
   curl ticketing.dev/api/users/currentuser 
 
   type 'thisisunsafe' on the web page (of chrome browser) 
+
+
+Search npm.io and install
+
+  $ npm install express-validator
+
+  See expressjs.com/en/guide/error-handling.html 
