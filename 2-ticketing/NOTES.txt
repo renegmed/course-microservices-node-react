@@ -1,0 +1,32 @@
+Status: wip
+
+$ mkdir auth 
+$ cd auth
+$ npm init -y
+$ npm install typescript ts-node-dev express @types/express 
+$ tsc --init 
+$ mkdir src 
+$ touch index.ts 
+$ npm start
+
+Adding Skaffold 
+
+$ touch skaffold.yaml
+
+$ skaffold dev 
+
+kubernetes.github.io/ingress-nginx/deploy
+
+$ minikube addons enable ingress
+
+$ minikube addons list 
+
+Add the line to /etc/hosts 
+
+  sudo vi /etc/hosts
+
+  127.0.0.1 ticketing.dev
+
+  ticketing.dev/api/users/currentuser 
+
+  type: thisisunsafe 
