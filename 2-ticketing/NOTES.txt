@@ -25,8 +25,13 @@ Add the line to /etc/hosts
 
   sudo vi /etc/hosts
 
-  127.0.0.1 ticketing.dev
+  127.0.0.1 ticketing.dev 
 
-  ticketing.dev/api/users/currentuser 
+  or for minikube ip
 
-  type: thisisunsafe 
+  192.168.49.2  ticketing.dev 
+
+
+  curl ticketing.dev/api/users/currentuser 
+
+  type 'thisisunsafe' on the web page (of chrome browser) 
