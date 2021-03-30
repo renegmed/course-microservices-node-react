@@ -47,3 +47,12 @@ Search npm.io and install
 For async error handling 
 
   $ npm install express-async-errors --save
+
+ 
+ 
+Section 8: database management and modeling 
+-------------------------------------------
+
+$ npm install mongoose 
+$ npm install @types/mongoose 
+
