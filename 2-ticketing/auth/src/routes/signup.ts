@@ -1,8 +1,8 @@
 import express, { Request, Response} from 'express';
 import { body, validationResult } from 'express-validator';
+import { User } from '../models/user';
 import { RequestValidationError } from '../errors/request-validation-error';
-import { DatabaseConnectionError } from '../errors/database-connection-error';
-
+ 
 const router = express.Router();
 
 router.post('/api/users/signup', [
@@ -14,30 +14,28 @@ router.post('/api/users/signup', [
         .isLength({ min: 4, max: 20})
         .withMessage('Password must be between 4 and 20 characters')
 ], async (req: Request, res: Response) => {
- 
     const errors = validationResult(req);
-    
-    //console.log(".....errors",errors);
-  
-    if (!errors.isEmpty()){
-        // return res.status(400).send(errors.array());  // return json data    
-         
-        //throw new Error('Invalid email or password');  // this will be picked up amy middleware error handler 
 
+    if (!errors.isEmpty()){ 
         throw new RequestValidationError(errors.array());
+    } 
+
+    const { email, password } = req.body;
+
+    const existingUser = await User.findOne( { email });
+
+    if (existingUser) {
+        console.log('Email in use');
+        return res.send({});
     }
+   
+    const user = User.build({ email, password })
 
-    //const { email, password } = req.body; 
+    await user.save();
 
-    // if (!email || typeof email != 'string') {
-    //     res.status(400).send('Provide a valid email')
-    // }
-
-    console.log("...Creating user")
+    res.status(201).send(user);
     
-    throw new DatabaseConnectionError();
-
-    res.send({});
-});
+  }
+);
 
 export  { router as signupRouter };
