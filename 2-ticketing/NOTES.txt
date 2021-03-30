@@ -42,3 +42,8 @@ Search npm.io and install
   $ npm install express-validator
 
   See expressjs.com/en/guide/error-handling.html 
+
+
+For async error handling 
+
+  $ npm install express-async-errors --save
