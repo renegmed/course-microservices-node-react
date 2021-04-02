@@ -29,7 +29,16 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String, 
         required: true
-    }    
+    }
+}, {
+        toJSON: {
+            transform(doc, ret) {
+                ret.id = ret._id;   // copy mongoose returned value to converted item and then remove the current _id
+                delete ret._id;
+                delete ret.password;   // remove property of returned converted item from mongoose
+                delete ret.__v;
+        }
+    }        
 });
 
 // this is a middleware function
