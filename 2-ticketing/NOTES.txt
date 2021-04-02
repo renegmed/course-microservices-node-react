@@ -56,3 +56,7 @@ Section 8: database management and modeling
 $ npm install mongoose 
 $ npm install @types/mongoose 
 
+Section 9: Authenticaton Strategies and Options 
+
+$ npm install cookie-session @types/cookie-session 
+$ npm install jsonwebtoken @types/jsonwebtoken
