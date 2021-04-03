@@ -16,3 +16,7 @@ post-signup2:
 
 post-signin:
 	curl -XPOST https://ticketing.dev/api/users/signin --insecure -H "Content-Type:application/json" -d '{"email":"janedoer@tesstest.com","password":"pass123456"}' -v
+
+# signup-signin:
+# 	curl -XPOST https://ticketing.dev/api/users/signup --insecure -H "Content-Type:application/json" -d '{"email":"robertplant@tesstest.com","password":"pass123}' -v
+# 	curl -XPOST https://ticketing.dev/api/users/signin --insecure -H "Content-Type:application/json" -d '{"email":"robertplant@tesstest.com","password":"pass123"}' -v
