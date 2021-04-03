@@ -63,7 +63,8 @@ $ npm install jsonwebtoken @types/jsonwebtoken
 
 $ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
 $ kubectl get secrets
-
+ 
+ 
 Mongo:
 
 > db.users.find();

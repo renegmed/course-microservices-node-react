@@ -19,6 +19,10 @@ post-signin:
 
 get-signin:
 	curl https://ticketing.dev/api/users/currentuser --insecure -b cookie.txt 
+
+post-signout:
+	curl -XPOST https://ticketing.dev/api/users/signout --insecure -c cookie.txt # empty out cookie
+
 # signup-signin:
 # 	curl -XPOST https://ticketing.dev/api/users/signup --insecure -H "Content-Type:application/json" -d '{"email":"robertplant@tesstest.com","password":"pass123}' -v
 # 	curl -XPOST https://ticketing.dev/api/users/signin --insecure -H "Content-Type:application/json" -d '{"email":"robertplant@tesstest.com","password":"pass123"}' -v
