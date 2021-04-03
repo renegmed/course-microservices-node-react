@@ -83,6 +83,11 @@ $ npm install react react-dom next
 client$ docker build -t renegmedal/client . 
 
 client$ docker push renegmedal/client 
+
+$ npm install bootstrap
+
+Reference: github.com/zeit/next.js/blob/master/errors/css-global.md 
+
 ----------------------------------------------------------------------
 
 Mongo:
