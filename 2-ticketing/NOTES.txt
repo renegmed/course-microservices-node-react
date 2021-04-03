@@ -72,6 +72,18 @@ $ npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mon
 use in-memory copy of MongoDB 
 use supertest library to make fake requests to our express app 
 
+---------------------------------------------------------------------- 
+
+Section 11: Integrating a Server-side-rendered React app
+
+$ mkdir client && cd client 
+$ npm init -y 
+$ npm install react react-dom next 
+
+client$ docker build -t renegmedal/client . 
+
+client$ docker push renegmedal/client 
+----------------------------------------------------------------------
 
 Mongo:
 
