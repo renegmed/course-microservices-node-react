@@ -64,7 +64,15 @@ $ npm install jsonwebtoken @types/jsonwebtoken
 $ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
 $ kubectl get secrets
  
- 
+Setcion 10: Testing isolated microservices
+
+$ npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongodb-memory-server
+
+
+use in-memory copy of MongoDB 
+use supertest library to make fake requests to our express app 
+
+
 Mongo:
 
 > db.users.find();
