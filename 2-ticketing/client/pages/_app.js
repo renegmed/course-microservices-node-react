@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import buildClient from '../api/build-client';
-
+import Header from '../components/header';
 // this serves as wrapper to component e.g. index.js
 // for reference: https://github.com/vercel/next.js/blob/master/errors/css-global.md
 const AppComponent = ({ Component, pageProps, currentUser }) => {
     return <div>
-        <h1>Header! {currentUser.email}</h1>
+       <Header currentUser={currentUser} />
         <Component {...pageProps} />
         </div>
 };
