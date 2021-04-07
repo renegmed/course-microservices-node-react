@@ -3,9 +3,9 @@ import buildClient from '../api/build-client';
 
 // this serves as wrapper to component e.g. index.js
 // for reference: https://github.com/vercel/next.js/blob/master/errors/css-global.md
-const AppComponent = ({ Component, pageProps }) => {
+const AppComponent = ({ Component, pageProps, currentUser }) => {
     return <div>
-        <h1>Header!</h1>
+        <h1>Header! {currentUser.email}</h1>
         <Component {...pageProps} />
         </div>
 };
@@ -25,7 +25,10 @@ AppComponent.getInitialProps = async (appContext) => {
 
     console.log("...pageProps:\n", pageProps);
 
-    return {};
+    return {
+        pageProps,
+        ...data
+    };
 
 };
 
