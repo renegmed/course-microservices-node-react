@@ -84,6 +84,9 @@ client$ docker build -t renegmedal/client .
 
 client$ docker push renegmedal/client 
 
+ticketing.dev/banana --> client/pages/banana.js
+
+
 $ npm install bootstrap
 
 Reference: github.com/zeit/next.js/blob/master/errors/css-global.md 
@@ -91,6 +94,9 @@ Reference: github.com/zeit/next.js/blob/master/errors/css-global.md
 https://ticketing.dev/auth/signup
 
 client$ npm install axios
+
+
+
 
 
 ----------------------------------------------------------------------

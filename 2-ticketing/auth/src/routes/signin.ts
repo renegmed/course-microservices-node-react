@@ -36,19 +36,19 @@ router.post('/api/users/signin',
         }
         
         // Generate JWT
-    const userJwt = jwt.sign({
-        id: existingUser.id, 
-        email: existingUser.email
-      }, 
-      process.env.JWT_KEY!  // ! means JWT_KEY is already defined (at index.js)
-    );
+        const userJwt = jwt.sign({
+                id: existingUser.id, 
+                email: existingUser.email
+            }, 
+            process.env.JWT_KEY!  // ! means JWT_KEY is already defined (at index.js)
+            );
 
-    // Store it on session object
-    req.session = {
-        jwt: userJwt
-    };
+        // Store it on session object
+        req.session = {
+            jwt: userJwt
+        };
 
-    res.status(201).send(existingUser);
+        res.status(201).send(existingUser);
     }
 
    
