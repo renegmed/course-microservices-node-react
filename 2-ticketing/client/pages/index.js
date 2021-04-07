@@ -17,6 +17,8 @@ const LandingPage = ({ currentUser }) => {
 // this is nextjs specific, thiis is where we can fetch data 
 LandingPage.getInitialProps = async context => {
 
+    console.log('LANDING PAGE');
+    
     const client = buildClient(context);
     const { data } = await client.get('/api/users/currentuser');
 
