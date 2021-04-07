@@ -96,8 +96,10 @@ https://ticketing.dev/auth/signup
 client$ npm install axios
 
 
-
-
+$ kubectl expose deployment ingress-nginx-controller --target-port=80 --type=NodePort -n kube-system
+$ kubectl get services -n kube-systemNAME                                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                                     AGE
+ingress-nginx-controller             NodePort    10.99.175.29    <none>        80:31714/TCP,443:32282/TCP,8443:32560/TCP   4s
+ 
 
 ----------------------------------------------------------------------
 
