@@ -4,9 +4,13 @@ import buildClient from '../api/build-client';
 // for nextjs, we are not allowed to fetch inside this component only on initialization only
 const LandingPage = ({ currentUser }) => {
      
-    console.log('...currentUser:\n', currentUser);
-     
-    return <h1>Landing Page</h1>
+    return ( 
+      currentUser ? 
+      <h1>You are signed in</h1> 
+      : 
+      <h1>You are NOT signed in</h1>
+    )
+    
 };
 
 // Execute on the server
