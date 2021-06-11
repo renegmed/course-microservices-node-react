@@ -1,5 +1,9 @@
 Status: wip
 
+Reference:
+  kubernetes.github.io/ignress-nginx/deploy/
+
+
 $ mkdir auth 
 $ cd auth
 $ npm init -y
@@ -10,34 +14,39 @@ $ touch index.ts
 $ npm start
 
 Adding Skaffold 
+----------------
 
 $ touch skaffold.yaml
 
 $ skaffold dev 
 
+
+Enable ingress to set up local url http://ticketing.dev
+
 kubernetes.github.io/ingress-nginx/deploy
 
-$ minikube addons enable ingress
+  $ minikube addons enable ingress
 
-$ minikube addons list 
+  $ minikube addons list 
 
-Add the line to /etc/hosts 
+  Add the line to /etc/hosts 
 
-  sudo vi /etc/hosts
+    sudo vi /etc/hosts
 
-  127.0.0.1 ticketing.dev 
+    127.0.0.1 ticketing.dev 
 
-  or for minikube ip
+    or for minikube ip
 
-  192.168.49.2  ticketing.dev 
+    192.168.49.2  ticketing.dev 
 
 
-  curl ticketing.dev/api/users/currentuser 
+    curl ticketing.dev/api/users/currentuser 
 
-  type 'thisisunsafe' on the web page (of chrome browser) 
+    type 'thisisunsafe' on the web page (of chrome browser) 
 
 
 Search npm.io and install
+-------------------------
 
   $ npm install express-validator
 
@@ -45,6 +54,7 @@ Search npm.io and install
 
 
 For async error handling 
+------------------------
 
   $ npm install express-async-errors --save
 
@@ -97,9 +107,13 @@ client$ npm install axios
 
 
 $ kubectl expose deployment ingress-nginx-controller --target-port=80 --type=NodePort -n kube-system
-$ kubectl get services -n kube-systemNAME                                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                                     AGE
+$ kubectl get services -n kube-system 
+NAME                                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                                     AGE
 ingress-nginx-controller             NodePort    10.99.175.29    <none>        80:31714/TCP,443:32282/TCP,8443:32560/TCP   4s
  
+----------------------------------------------------------------------
+
+npm run dev
 
 ----------------------------------------------------------------------
 

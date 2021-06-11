@@ -20,7 +20,7 @@ export default ({ currentUser }) => {
     
     return <nav className="navbar navbar-light bg-light">
         <Link href="/">
-            <a classNAme="navbar-brand">GitTix</a>
+            <a className="navbar-brand">GitTix</a>
 
         </Link>
 

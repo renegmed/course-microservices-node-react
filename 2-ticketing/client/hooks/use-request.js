@@ -7,6 +7,9 @@ export default ({ url, method, body, onSuccess }) => {
     const doRequest = async () => {
         try{
             setErrors(null);
+
+            console.log("...use-requestion url:", url, "  body:", body);
+            
             const response = await axios[method](url, body); // function with arguments url, body 
             
             if (onSuccess) {
