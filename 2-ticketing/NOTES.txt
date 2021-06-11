@@ -121,3 +121,28 @@ Mongo:
 
 > db.users.find();
 > db.users.remove({});
+
+
+--------------------------------------------------------
+
+Section 12: Code Sharing and Reuse Between Services 
+---------------------------------------------------
+
+
+Publishing NMP Modules
+----------------------
+
+$ npm login 
+
+upload codes:
+
+$ npm publish --access public 
+
+
+Project Setup
+-------------
+
+$ tsc --init 
+
+$ npm install typescript del-cli --save-dev 
+
